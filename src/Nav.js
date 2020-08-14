@@ -13,7 +13,7 @@ const Nav = () => {
         <li href=''>Hello</li>
       </ul>
     </div>
-  );
+  ); 
 }
 
 
