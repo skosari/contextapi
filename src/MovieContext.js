@@ -2,7 +2,7 @@ import React, {useState, createContext} from 'react';
 
 export const MovieContext = createContext();
 
-export const MovieProvider = () => {
+export const MovieProvider = (props) => {
     const [movies, setMovies] = useState([
         {
           name: 'Harry Potter',
@@ -21,6 +21,8 @@ export const MovieProvider = () => {
         }
       ]);
     return (
-
+        <MovieContext.Provider value={[movies, setMovies]}>
+            {props.children} {/**props.children will allow our outher components to access our movie list*/}
+        </MovieContext.Provider>
     );
 }
