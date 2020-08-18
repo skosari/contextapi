@@ -23,8 +23,8 @@ const AddMovie = () => {
 
     return (
         <form onSubmit={addMovie} name='add'>
-            <input type="text" name="name" value={name} onChange={updateName} />
-            <input type="text" name="price" value={price} onChange={updatePrice} />
+            <input type="text" name="name" value={name} onChange={updateName} required placeholder="Movie"/>
+            <input type="text" name="price" value={price} onChange={updatePrice} required placeholder="$Price"/>
             <button >Submit</button>
         </form>
     )    
